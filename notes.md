@@ -83,7 +83,7 @@ perfect for this!
 
 It is nice to think about your tests as documentation for your code.  They show 
 what your code should be doing.  It makes sense that this documentation should 
-be about generic properties, rather than specific tests.
+be about generic properties, rather than purely specific examples.
 
 Another example: the Fourier transform of a pure sine wave should be the same 
 at every time sample.  One way you might document your Fourier transform code 
