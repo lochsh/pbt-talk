@@ -3,14 +3,14 @@
 
 ## Intro
 
-* We all know the value of writing automated tests for our code, and James has 
-  done awesome work introducing us to TDD.  Today I want to talk about another 
-  technique that can improve the usefulness of your tests.  Property based 
-  testing involves running a single test many times with multiple randomly 
-  generated inputs.  This allows you to test more with less code, without the 
-  need for you to think up examples, and helps you find edge cases.  If we 
-  consider our tests as documentation, it also improves the breadth and 
-  generality of that documentation.
+We all know the value of writing automated tests for our code, and James has 
+done awesome work introducing us to TDD.  Today I want to talk about another 
+technique that can improve the usefulness of your tests.  Property based 
+testing involves running a single test many times with multiple randomly 
+generated inputs.  This allows you to test more with less code, without the 
+need for you to think up examples, and helps you find edge cases.  If we 
+consider our tests as documentation, it also improves the breadth and 
+generality of that documentation.
 
 
 
