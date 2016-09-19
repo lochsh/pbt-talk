@@ -1,7 +1,7 @@
-## Property based testing
+# Property based testing
 
 
-# Intro
+## Intro
 
 * We all know the value of writing automated tests for our code, and James has 
   done awesome work introducing us to TDD.  Today I want to talk about another 
@@ -14,7 +14,7 @@
 
 
 
-# Example based testing
+## Example based testing
 
 I can't speak for everyone, but when I have written tests in the past, they 
 have been largely example-based.  I often found myself having to create example 
@@ -43,7 +43,7 @@ This is better.  We now test 1000 different integers, rather than just 1.  We
 can still do better though!
 
 
-# Property based testing
+## Property based testing
 
 The previous example was an improvement, but it still involved us having to 
 pick some examples to test with.  We picked more examples, sure, but it's still 
@@ -87,4 +87,4 @@ at every time sample.  One way you might document your Fourier transform code
 is by having a test that tests for this for a variety of sine wave frequencies 
 and offsets (I recently did something v similar).
 
-# Interactive test writing?
+## Interactive test writing?
