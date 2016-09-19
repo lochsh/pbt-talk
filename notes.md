@@ -67,9 +67,9 @@ import hypothesis
 from hypothesis import strategies
 
 @hypothesis.given(strategies.integers())
-def test_foo(input):
+def test_foo(bar):
     """Test function foo returns zero when both inputs are equal"""
-    assert foo(input, input)
+    assert foo(bar, bar)
 ```
 
 # Use cases
