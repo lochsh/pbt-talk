@@ -32,13 +32,12 @@ I want to ensure my function `sort` actually sorts a list of integers.  My
 test, however, only tests for one specific input.  It's possible that even if 
 it passes, other values could cause problems.  It also doesn't document the 
 desired behaviour of my code very well.  It's just an example of how the could 
-should work, rather than a statement defining a more general property.  The 
-idea of property based testing is for us to give guarantees for how our code 
-behaves, in other words properties that should always hold true.
+should work, rather than a statement defining a more general property.
 
-It's difficult to do this with example based testing.
+It's inherently difficult or lengthy demonstrate generic properties with 
+example based testing.
 
-With this in mind, here is a better test:
+With this in mind, here is an improved test:
 
 ```python
 import random
@@ -69,6 +68,7 @@ A testing framework can do this for us:
 
 ```python
 import hypothesis
+
 
 @hypothesis.strategies.lists(hypothesis.strategies.integers(), min_size=2)
 def test_sort_list_of_ints(ints):
