@@ -85,9 +85,9 @@ It is nice to think about your tests as documentation for your code.  They show
 what your code should be doing.  It makes sense that this documentation should 
 be about generic properties, rather than purely specific examples.
 
-Another example: the Fourier transform of a pure sine wave should be the same 
-at every time sample.  One way you might document your Fourier transform code 
-is by having a test that tests for this for a variety of sine wave frequencies 
-and offsets (I recently did something v similar).
+Another example: the magnitude of the Fourier transform of a pure sine wave 
+should be the same at every time sample.  One way you might document your 
+Fourier transform code is by having a test that tests for this for a variety of 
+sine wave frequencies and offsets (I recently did something v similar).
 
 ## Interactive test writing?
