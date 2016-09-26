@@ -4,7 +4,7 @@
 
 We all know the value of writing automated tests for our code, and James has 
 done awesome work introducing us to Test Driven Development.  Today I want to 
-talk about another technique that can improve the usefulness of your tests.
+talk about another technique that can improve the usefulness of our tests.
 
 Property based testing involves running a single test many times with multiple 
 randomly generated inputs.  This allows you to test more with less code.  It 
@@ -93,28 +93,31 @@ The key differences:
 
 * From an ergonomic point of view, it's much easier to see straight away what 
   property we are testing.  The decorator line specifies that this test should 
-  pass for all list of integers of length &ge;2.
+  pass for all list of integers of length &ge;2.  We test more, but with less 
+  code.
 
 
 ## Use cases
 
-I think these kind of tests are useful in any software project, but some 
-particularly motivating examples can be testing the parsing of user text input.  
-It's infeasible to think of every possible string a user could input to your 
-GUI; property based tests can give you more confidence in your sanitising and 
-parsing.
+I think these kind of tests are useful in any software project, but here are 
+some particularly motivating examples:
 
-Many mathematical calculations lend themselves well to being tested this way.  
-For example, the objective function in Expectation-Maximisation should always 
-decrease or plateau.  If it increases at any iteration, you have a problem.
+* Testing the parsing of user text input.  It's infeasible to think of every 
+  possible string a user could input to your GUI; property based tests can give 
+  you more confidence in your sanitising and parsing.
 
-The Fourier Transforms of a pure sine wave should have constant magnitude 
-across time samples.
+* Many mathematical calculations lend themselves well to being tested this way.  
+  For example, the objective function in Expectation-Maximisation should always 
+  decrease or plateau.  If it increases at any iteration, you have a problem.
+
+* The Fourier Transforms of a pure sine wave should have constant magnitude 
+  across time samples.
 
 These are invariant properties that are poorly demonstrated with examples.  
 Property based testing makes your tests function better both as documentation, 
-and as proof of the robustness of your code.  I hope you'll all consider giving 
-it a try and using it in your work!
+and as proof of the robustness of your code.  Each test is more concise, and 
+each test goes further.  For these hopefully very compelling reasons, I hope 
+you'll all consider giving PBT a try and using it in your work!
 
 Some frameworks to read up on are:
 
@@ -123,5 +126,9 @@ Some frameworks to read up on are:
 
 * `QuickCheck` is the classic property based testing framework, released for 
   Haskell in 1999 and ported to Erlang, Scala and other functional languages.
+
+* `RapidCheck` for C++
+
+* `FsCheck` for .NET languages (C# etc.)
 
 Enjoy!
