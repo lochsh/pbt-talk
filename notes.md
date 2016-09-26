@@ -25,7 +25,8 @@ and manually code them.  For example, testing a sorting algorithm:
 ```python
 def test_sort_list_of_ints():
     ints = [1, 5, 10, 0, 3, 11, 2]
-    assert all(x <= y for x, y in zip(sort(ints, ints[1:])))
+    result = sort(ints)
+    assert all(x <= y for x, y in zip(result, result[1:]))
 ```
 
 I want to ensure my function `sort` actually sorts a list of integers.  My 
@@ -46,7 +47,8 @@ import random
 def test_sort_list_of_ints():
     for i in range(2, 101):
         ints = [random.randint(-1000, 1000) for _ in range(i)]
-        assert all(x <= y for x, y in zip(sort(ints, ints[1:])))
+        result = sort(ints)
+        assert all(x <= y for x, y in zip(result, result[1:]))
 ```
 
 This is better &ndash; we are now testing for lists with  between 2 and 100 
@@ -71,11 +73,13 @@ Python:
 
 ```python
 import hypothesis
+from hypothesis import strategies
 
 
-@hypothesis.strategies.lists(hypothesis.strategies.integers(), min_size=2)
+@hypothesis.given(strategies.lists(strategies.integers(), min_size=2))
 def test_sort_list_of_ints(ints):
-    assert all(x <= y for x, y in zip(sort(ints, ints[1:])))
+    result = sort(ints)
+    assert all(x <= y for x, y in zip(result, result[1:]))
 ```
 
 The key differences:
