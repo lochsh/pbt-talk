@@ -80,7 +80,7 @@ def test_sort_list_of_ints(ints):
 
 The key differences:
 
-* When running the test, `hypothesis` actively seeks out falsifying examples.  
+* When running the test, `hypothesis` actively seeks out falsifying examples. 
   Not only that, but the examples are simplified until a smaller example is 
   found that still causes the problem.  These examples are then stored in a 
   cache, so that a test that fails once will always fail, until the code is 
