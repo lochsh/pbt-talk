@@ -64,15 +64,10 @@ A property based testing framework can help resolve these issues.
 
 ## Property based testing
 
-So, what can a property based testing framework add to this?  David MacIver, 
-who created the framework `hypothesis`, describes a PBT framework as consisting 
-of:
+So, what can a property based testing framework add to this?
 
-* A fuzzer
-* A library of tools for making it easy to construct property-based tests using 
-  that fuzzer.
-
-Here is the above example test modified to use `hypothesis`:
+Here is the above example test modified to use the `hypothesis` framework for 
+Python:
 
 ```python
 import hypothesis
@@ -106,7 +101,7 @@ some particularly motivating examples:
   possible string a user could input to your GUI; property based tests can give 
   you more confidence in your sanitising and parsing.
 
-* Many mathematical calculations lend themselves well to being tested this way.  
+* Many mathematical calculations lend themselves well to being tested this way. 
   For example, the objective function in Expectation-Maximisation should always 
   decrease or plateau.  If it increases at any iteration, you have a problem.
 
