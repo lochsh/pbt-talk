@@ -108,7 +108,7 @@ some particularly motivating examples:
 * The Fourier Transforms of a pure sine wave should have constant magnitude 
   across time samples.
 
-These are invariant properties that are poorly demonstrated with examples.  
+These are invariant properties that are poorly demonstrated with examples. 
 Property based testing makes your tests function better both as documentation, 
 and as proof of the robustness of your code.  Each test is more concise, and 
 each test goes further.  For these hopefully very compelling reasons, I hope 
