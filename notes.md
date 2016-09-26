@@ -116,14 +116,16 @@ you'll all consider giving PBT a try and using it in your work!
 
 Some frameworks to read up on are:
 
-* `hypothesis` by David MacIver, which is currently available for Python only.  
-  Java, C and C++ implementations will hopefully come some time in the future.
+* [`hypothesis`](hypothesis.works) by David MacIver, which is currently 
+  available for Python only.  Java, C and C++ implementations will hopefully 
+  come some time in the future.
 
-* `QuickCheck` is the classic property based testing framework, released for 
-  Haskell in 1999 and ported to Erlang, Scala and other functional languages.
+* [`QuickCheck`](https://hackage.haskell.org/package/QuickCheck) is the classic 
+  property based testing framework, released for Haskell in 1999 and ported to 
+  Erlang, Scala and other functional languages.
 
-* `RapidCheck` for C++
+* [`RapidCheck`](https://github.com/emil-e/rapidcheck) for C++
 
-* `FsCheck` for .NET languages (C# etc.)
+* [`FsCheck`](https://github.com/fscheck/FsCheck) for .NET languages (C# etc.)
 
 Enjoy!
