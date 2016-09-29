@@ -73,10 +73,10 @@ Python:
 
 ```python
 import hypothesis
-from hypothesis import strategies
+from hypothesis import strategies as st
 
 
-@hypothesis.given(strategies.lists(strategies.integers(), min_size=2))
+@hypothesis.given(st.lists(st.integers(), min_size=2))
 def test_sort_list_of_ints(ints):
     result = sort(ints)
     assert all(x <= y for x, y in zip(result, result[1:]))
@@ -109,7 +109,7 @@ some particularly motivating examples:
   For example, the objective function in Expectation-Maximisation should always 
   decrease or plateau.  If it increases at any iteration, you have a problem.
 
-* The Fourier Transforms of a pure sine wave should have constant magnitude 
+* The Fourier Transform of a pure sine wave should have constant magnitude 
   across time samples.
 
 These are invariant properties that are poorly demonstrated with examples. 
