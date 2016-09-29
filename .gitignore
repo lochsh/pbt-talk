@@ -1,1 +1,5 @@
 *swp
+.cache
+.hypothesis
+venv
+__pycache__
