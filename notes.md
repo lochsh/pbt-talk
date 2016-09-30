@@ -71,7 +71,7 @@ A property based testing framework can help resolve these issues.
 So, what can a property based testing framework add to this?
 
 Here is the above example test modified to use the `hypothesis` framework for 
-Python:
+Python, which I learnt about at Europython:
 
 ```python
 import hypothesis
