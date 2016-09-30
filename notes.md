@@ -110,7 +110,7 @@ some particularly motivating examples:
   decrease or plateau.  If it increases at any iteration, you have a problem.
 
 * The Fourier Transform of a pure sine wave should have constant magnitude 
-  across time samples.
+  across time shifts.
 
 These are invariant properties that are poorly demonstrated with examples. 
 Property based testing makes your tests function better both as documentation, 
