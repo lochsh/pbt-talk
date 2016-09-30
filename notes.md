@@ -8,7 +8,7 @@ talk about another technique that can improve the usefulness of our tests.
 
 Property based testing involves running a single test many times with multiple 
 randomly generated inputs.  This allows you to test more with less code.  It 
-makes it easier for you to write better tests, and avoids the need for you to 
+makes it easier for you to write better tests, and reduces the need for you to 
 think up examples.
 
 If we consider our tests as documentation, PBT improves the breadth and 
@@ -26,19 +26,21 @@ and manually code them.  For example, testing a sorting algorithm:
 def test_sort_list_of_ints():
     ints = [1, 5, 10, 0, 3, 11, 2]
     result = sort(ints)
-    assert all(x <= y for x, y in zip(result, result[1:]))
+    assert result == [0, 1, 2, 3, 5, 10, 11]
 ```
 
 I want to ensure my function `sort` actually sorts a list of integers.  My 
 test, however, only tests for one specific input.  It's possible that even if 
 it passes, other values could cause problems.  It also doesn't document the 
-desired behaviour of my code very well.  It's just an example of how the could 
-should work, rather than a statement defining a more general property.
+desired behaviour of my code fully.  Examples are helpful in understanding how 
+something works, but they aren't the whole story.  This test is just an example 
+of how the code should work, rather than a statement defining a more general 
+property.
 
 It's inherently difficult or lengthy demonstrate generic properties with 
 example based testing.
 
-With this in mind, here is an improved test:
+With this in mind, here is a modified test:
 
 ```python
 import random
@@ -51,15 +53,15 @@ def test_sort_list_of_ints():
         assert all(x <= y for x, y in zip(result, result[1:]))
 ```
 
-This is better &ndash; we are now testing for lists with  between 2 and 100 
-elements long, containing random integers in the range &plusmn;1000.  There are 
-some difficulties here:
+This is better in some ways &ndash; we are now testing for lists with  between 
+2 and 100 elements long, containing random integers in the range &plusmn;1000.  
+However, there are some difficulties here:
 
 * This test may pass sometimes and fail others.  Even though it may have failed 
   in the past, we don't have a record of the example that caused it to fail.
 
-* Although this is more general than the single example based test, it still 
-  relies on us choosing which range of values we want to test.
+* There is no direction to our random search.
+
 
 A property based testing framework can help resolve these issues.
 
@@ -112,11 +114,11 @@ some particularly motivating examples:
 * The Fourier Transform of a pure sine wave should have constant magnitude 
   across time shifts.
 
-These are invariant properties that are poorly demonstrated with examples. 
-Property based testing makes your tests function better both as documentation, 
-and as proof of the robustness of your code.  Each test is more concise, and 
-each test goes further.  For these hopefully very compelling reasons, I hope 
-you'll all consider giving PBT a try and using it in your work!
+These are invariant properties that are poorly demonstrated with examples 
+alone.  Property based testing allows your tests to function better both as 
+documentation, and as proof of the robustness of your code.  Each test is more 
+concise, and each test goes further.  For these hopefully very compelling 
+reasons, I hope you'll all consider giving PBT a try and using it in your work!
 
 Some frameworks to read up on are:
 
@@ -127,6 +129,8 @@ Some frameworks to read up on are:
 * [`QuickCheck`](https://hackage.haskell.org/package/QuickCheck) is the classic 
   property based testing framework, released for Haskell in 1999 and ported to 
   Erlang, Scala and other functional languages.
+
+* [`theft`](https://github.com/silentbicycle/theft) for C
 
 * [`RapidCheck`](https://github.com/emil-e/rapidcheck) for C++
 
