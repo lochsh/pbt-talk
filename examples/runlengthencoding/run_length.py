@@ -8,7 +8,7 @@ For example, the list
     [1, 1, 3, 1]
 
 in run-length encoded form is
-    [[2, 1], [1, 3], [1, 1]]
+    [[1, 2], [3, 1], [1, 1]]
 """
 
 
