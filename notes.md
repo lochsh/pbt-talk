@@ -130,9 +130,12 @@ Some frameworks to read up on are:
   property based testing framework, released for Haskell in 1999 and ported to 
   Erlang, Scala and other functional languages.
 
+    * [`quickcheck`](https://github.com/BurntSushi/quickcheck) port for Rust
+
 * [`theft`](https://github.com/silentbicycle/theft) for C
 
 * [`RapidCheck`](https://github.com/emil-e/rapidcheck) for C++
+
 
 * [`FsCheck`](https://github.com/fscheck/FsCheck) for .NET languages (C# etc.)
 
